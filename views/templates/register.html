@@ -1,0 +1,28 @@
+<ion-view view-title="注册新帐号">
+    <ion-nav-buttons side="left">
+        <button ng-disabled="" ng-click="registerBack()" class="button button-icon icon ion-ios-arrow-back" value="返回">返回</button>
+    </ion-nav-buttons>
+    <ion-content class="padding" style="padding: 0">
+            <div class="list">
+                <label class="item item-input">
+                    <span class="input-label">邮箱：</span>
+                    <input type="text" ng-model="user.email" ng-blur="checkEmail()">
+                </label>
+                <label class="item item-input">
+                    <span class="input-label">用户名：</span>
+                    <input type="text" ng-model="user.username" ng-blur="checkUsername()">
+                </label>
+                <label class="item item-input">
+                    <span class="input-label">密码：</span>
+                    <input type="password" ng-model="user.password" ng-blur="checkPassword()">
+                </label>
+                <label class="item item-input">
+                    <span class="input-label">确认密码：</span>
+                    <input type="password"  ng-model="user.password1" ng-blur="checkPassword1()">
+                </label>
+            </div>
+            <div class="padding">
+                <button class="button button-block button-balanced"   ng-click="userRegister()">注册</button>
+            </div>
+    </ion-content>
+</ion-view>

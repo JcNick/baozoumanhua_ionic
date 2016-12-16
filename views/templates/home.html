@@ -1,0 +1,43 @@
+
+<ion-view view-title="暴走漫画" id="body_home">
+    <ion-nav-buttons side="right">
+        <button ng-disabled="" class="button button-icon icon ion-plus-round" ng-click="openModal()"></button>
+    </ion-nav-buttons>
+    <div class="tabs-striped tabs-top tabs-color-pink tabs-color-light">
+        <div class="tabs">
+            <a class="tab-item "  ng-repeat="b in barList" ng-class="{active:b.topic_type==topic_type,active1:b.topic_type!=topic_type}" ng-click="topic(b.topic_type)">
+                {{b.text}}
+            </a>
+        </div>
+    </div>
+    <ion-content class="padding" style="padding: 0px;margin-top: 29px" >
+        <ion-refresher ng-if="topicList.length > 0" pulling-text="正在刷新..." on-refresh="refreshTopic()">
+        </ion-refresher>
+        <div class="list card" ng-repeat="topic in topicList">
+             <div class="item item-avatar" style="border-width: 0px">
+                 <img ng-if="topic.topic_type == 'videos'" src="{{topic.image_url}}">
+                 <img ng-if="topic.topic_type != 'videos'" src="{{topic.avatar}}">
+                 <p ng-if="topic.topic_type == 'videos'">暴走漫画</p>
+                 <h2>{{topic.username}}</h2><div style="display: block;text-overflow: ellipsis;white-space: nowrap;overflow: hidden;width: 100px;background-color:pink;text-align:center;border-radius: 10px;float: right;margin-top: -23px">{{topic.topic_second_type}}</div>
+                 <p>{{topic.release_date}}</p>
+                 <p>{{topic.title}}</p>
+                 <div style="width:34px;border-radius:10px;background-color:#ffc900;text-align:center;margin-left:-54px;margin-top:-21px;font-size:12px">热门</div>
+             </div>
+             <div class="item item-body">
+                 <img  class="full-image"  ng-if="topic.topic_type != 'text'" src="{{topic.image_url}}">
+                 <div ng-if="topic.topic_type == 'videos'" style="text-align: center;position:relative"><img style="margin-top: -140px" src="http://wimg.spriteapp.cn/pc/jwplayer/skin/display/v_play_active.png"></div>
+                 <p>
+                     {{topic.title}}
+                 </p>
+             </div>
+         </div>
+         <ion-infinite-scroll on-infinite="loadMore()" distance="10%" >
+         </ion-infinite-scroll>
+    </ion-content>
+
+</ion-view>
+
+
+
+
+

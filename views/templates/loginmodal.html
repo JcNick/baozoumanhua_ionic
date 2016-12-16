@@ -1,0 +1,29 @@
+<ion-modal-view>
+    <ion-header-bar class="bar bar-header bar-energized">
+        <h1 class="title">登陆</h1>
+        <button class="button button-clear button-primary" ng-click="modal.hide()">关闭</button>
+    </ion-header-bar>
+    <ion-content class="padding" style="padding: 0;background-color: #ffc900;">
+        <div class="list" style="margin-top: 30px">
+            <span style="font-size: 30px;font-weight: bold;color: #ffffff">暴走漫画</span>
+        </div>
+        <div class="list" style="margin-top: 60px;">
+            <form method="post" id="frmLogin">
+            <label class="item item-input" style="border-top-left-radius: 15px;border-top-right-radius: 15px;margin-left: 30px;margin-right: 30px;">
+                <span class="input-label">用户名</span>
+                <input id="username" ng-model="user.username"  placeholder="暴走名"  type="text">
+            </label>
+            <label class="item item-input" style="border-bottom-left-radius: 15px;border-bottom-right-radius: 15px;margin-left: 30px;margin-right: 30px;">
+                <span class="input-label">密码</span>
+                <input id="password" ng-model="user.password"  placeholder="密码" type="password">
+            </label>
+
+            <button style="margin-top: 10px;border-radius: 15px;margin-left: 30px;margin-right: 30px;width: 83%" class="button  button-dark" ng-click="login()">登录</button>
+            <div class="row">
+                <div class="col col-50"><a ng-click="modal.hide()" ui-sref="register">注册帐号</a></div>
+                <div class="col col-50"><a>忘记密码</a></div>
+            </div>
+            </form>
+        </div>
+    </ion-content>
+</ion-modal-view>

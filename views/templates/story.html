@@ -1,0 +1,14 @@
+<ion-view view-title="小故事">
+    <ion-content class="padding" style="padding: 0">
+        <ion-refresher ng-if="storyList.length > 0" pulling-text="正在刷新..." on-refresh="refreshStory()">
+        </ion-refresher>
+        <div class="list">
+            <a class="item item-thumbnail-left item-icon-right" href="#/tab/storyDetails/{{item._id}}" ng-repeat="item in storyList">
+                <img src="{{item.cover}}">
+                <h2>{{item.title}}</h2>
+                <p style="white-space:initial !important;height:42px !important;">{{item.content}}</p>
+                <i class="icon ion-chevron-right" style="color: #ccc;font-size: 22px"></i>
+            </a>
+        </div>
+    </ion-content>
+</ion-view>
