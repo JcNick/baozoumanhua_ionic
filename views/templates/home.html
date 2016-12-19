@@ -25,7 +25,7 @@
              </div>
              <div class="item item-body">
                  <img  class="full-image"  ng-if="topic.topic_type != 'text'" src="{{topic.image_url}}">
-                 <div ng-if="topic.topic_type == 'videos'" style="text-align: center;position:relative"><img style="margin-top: -140px" src="http://wimg.spriteapp.cn/pc/jwplayer/skin/display/v_play_active.png"></div>
+                 <div ng-if="topic.topic_type == 'videos'" style="text-align: center;position:relative"><a target=”_blank" href="{{topic.video_url}}"><img style="margin-top: -140px" src="http://wimg.spriteapp.cn/pc/jwplayer/skin/display/v_play_active.png"></a></div>
                  <p>
                      {{topic.title}}
                  </p>
