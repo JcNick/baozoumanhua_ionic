@@ -2,7 +2,7 @@
  -----------------
  技术点 angular+ionic
 
- ### INSERT
+## INSERT
  --------
  npm install
 
