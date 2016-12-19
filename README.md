@@ -1,8 +1,8 @@
- baozoumanhua_ionic
+ ＃baozoumanhua_ionic
  -----------------
  技术点 angular+ionic
 
- INSERT
+ ＃INSERT
  --------
  npm install
 
