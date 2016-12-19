@@ -1,4 +1,7 @@
 ## baozoumanhua_ionic
+
+ * 模仿暴走漫画app
+ 
  * 技术点 angular+ionic
 
 ## INSERT
