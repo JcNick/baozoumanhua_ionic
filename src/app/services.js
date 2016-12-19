@@ -43,8 +43,6 @@ httpResource.factory('blData',function($q,$resource){
         }
     };
 
-
-
 });
 
 
