@@ -12,7 +12,7 @@
 
  * 访问:http://localhost:3060/home
 ## 版本 
-[客户端](https://github.com/linkenliu/baozoumanhua_ionic.git "Title")
-[API](https://github.com/linkenliu/baozoumanhua_api.git "Title")
+* [客户端](https://github.com/linkenliu/baozoumanhua_ionic.git "Title")
+* [API](https://github.com/linkenliu/baozoumanhua_api.git "Title")
 
 
