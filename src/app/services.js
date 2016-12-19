@@ -4,7 +4,7 @@
 
 var httpResource = angular.module('ionicApp.services',['ngResource']);
 httpResource.factory('blData',function($q,$resource){
-    const API = 'http://192.168.1.129:3000';
+    const API = 'http://139.196.32.78:3000';
     var blResource = function(type,params) {
         let requestUrl = API+"/home/v1/"+type;
         return $resource(requestUrl,{id:'@id'},{

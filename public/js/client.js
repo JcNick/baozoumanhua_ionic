@@ -96,7 +96,7 @@
 			this.scrollToBottom();
 			
 			//连接websocket后端服务器
-			this.socket = io.connect('http://192.168.18.14:9000');
+			this.socket = io.connect('http://139.196.32.78:9000');
 			
 			//告诉服务器端有用户登录
 			this.socket.emit('login', {userid:this.userid, username:this.username});
